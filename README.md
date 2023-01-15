@@ -1,2 +1,2 @@
 # python-dsa
- DSA with Python
+Data Structures and Algorithms practice with Python
