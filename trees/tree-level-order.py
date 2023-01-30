@@ -17,13 +17,15 @@ def nextLevelTrees(curr_level_trees):
 
     for tree in curr_level_trees:
 
-        print(tree.val, end=" ")
+        print(tree.val, end=" ") # print with space in between
 
         if tree.left:
             next_level_trees.append(tree.left)
         if tree.right:
             next_level_trees.append(tree.right)
 
+    print("") # jump to next line
+    
     return next_level_trees
     
 
