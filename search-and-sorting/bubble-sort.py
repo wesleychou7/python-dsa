@@ -1,14 +1,13 @@
 def bubble_sort1(arr):
     """
-    Bubble sort implementation (first attempt)
+    Bubble sort implementation (my approach)
     """
 
     end = len(arr)
-    allsorted = False
 
-    while not allsorted:
+    while True:
 
-        counter = 0
+        swapped = False
 
         for i in range(end):
 
@@ -18,16 +17,17 @@ def bubble_sort1(arr):
                 arr[i] = arr[i+1]
                 arr[i+1] = temp
 
-                counter += 1
-        
+                swapped = True
+
+        if not swapped:
+            break
+
         end -= 1
-        if counter == 0:
-            allsorted = True
     
     return arr
 
 arr = [67,9,4,2,10,32,99,10,1,3,50,23]
-# print(bubble_sort1(arr))
+print(bubble_sort1(arr))
 
 
 def bubble_sort2(arr):
@@ -51,4 +51,4 @@ def bubble_sort2(arr):
 
     return arr
 
-print((bubble_sort2(arr)))
+# print((bubble_sort2(arr)))
