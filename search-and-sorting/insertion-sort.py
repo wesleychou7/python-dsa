@@ -44,8 +44,28 @@ def insertion_sort2(arr):
                 break
         
         arr.insert(insert_index, arr.pop(i))
+
+    return arr
+
+
+def insertion_sort3(arr):
+    """
+    textbook implementation (better)
+    """
+    for i in range(1,len(arr)):
+
+        position = i
+        currentvalue = arr[i]
+        
+        while position > 0 and currentvalue < arr[position-1]:
+
+            arr[position] = arr[position-1]
+            position -= 1
+        
+        arr[position] = currentvalue
     
     return arr
 
+
 print(arr, "initial")
-print(insertion_sort2(arr), "final")
+print(insertion_sort3(arr), "final")
